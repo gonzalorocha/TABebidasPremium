@@ -7,11 +7,10 @@ var api 			 = require('./routes/api');
 var index      = require('./routes/index');
 
 app.set('port', (process.env.PORT || 4000));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-
 app.use(express.static(__dirname + '/FrontEnd'));
-
 app.set('view engine', 'ejs');
 
 app.use('/api', api);

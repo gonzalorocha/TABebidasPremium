@@ -7,10 +7,11 @@ exports.connect = function() {
   let connection = {
     host: process.env.ENV == 'dev' ? 'localhost' : '127.0.0.1',
     user: process.env.ENV == 'dev' ? 'root' : 'root',
-    pass: process.env.ENV == 'dev' ? 'root' : 'root',
-    name: process.env.ENV == 'dev' ? 'mensajeria' : 'mensajeria',
-    port: process.env.ENV == 'dev' ? '3000' : '3000'//
+    pass: process.env.ENV == 'dev' ? '' : '',
+    name: process.env.ENV == 'dev' ? 'tabebidaspremium' : 'tabebidaspremium',
+    port: process.env.ENV == 'dev' ? '8889' : '8889'//
   }
+
   pool = mysql.createPool({
     connectionLimit : 10,
     host            : connection.host,
@@ -19,7 +20,10 @@ exports.connect = function() {
     database        : connection.name,
     port            : connection.port
   });
+
+  connection.connect;
 };
+
 exports.get = function() {
   return pool;
 };
