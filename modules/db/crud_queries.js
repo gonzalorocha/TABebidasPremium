@@ -7,8 +7,8 @@ module.exports.product = {
 };
 
 module.exports.product_type = {
-    get: 'SELECT * FROM product_type WHERE pt.active=0',
-    getByID: 'SELECT * FROM product_typ WHERE p.id= ?',
+    get: 'SELECT * FROM product_type pt WHERE pt.active=0',
+    getByID: 'SELECT * FROM product_type pt WHERE pt.id= ?',
     post: 'INSERT INTO product_type SET ?',
     put: 'UPDATE product_type SET ? WHERE ?',
     delete: 'UPDATE product_type SET active = id WHERE ?'
