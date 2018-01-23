@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<html ng-app="app">
     <head>
         <!-- Meta -->
         <meta charset="utf-8">
@@ -23,6 +20,17 @@
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- libreria angular -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="app.js"></script>
+        <base href="/">
+
+        <script src="views/productList/controllers/productList_controller.js"></script>
+        <script src="views/productList/services/productList_service.js"></script>
+        <script src="app.route.js"></script>
+        <script src="angular-route.js"></script>
+
+
+
+
         <!-- CSS -->
         <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,7 +99,7 @@
                                         <a href="./index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">Inicio</a>
                                     </li>
                                     <li class="dropdown mmenu">
-                                        <a href="./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Productos</a>
+                                        <a href="productList" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Productos</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cómo comprar</a>
@@ -1065,6 +1073,9 @@
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         <script src="js/vendors/select/jquery.selectBoxIt.min.js"></script>
         <script src="js/main.js"></script>
+
+
+
 
     </body>
 </html>
