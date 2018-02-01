@@ -1,1 +1,23 @@
-PUTITA
+<html>
+    <div>
+        <h1>Listado de productos</h1>
+        <div>
+            Filtro:
+            <input type="text" placeholder="Buscar..." ng-model="search">
+        </div>
+        <table>
+            <thead>
+                <th>Tipo</th>
+                <th>Producto</th>
+                <th>Precio</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in pl.products | filter:search">
+                    <td>{{p.product_type}}</td>
+                    <td>{{p.description}}</td>
+                    <td>{{p.price}}</td>
+                </tr>
+            </tbody>          
+        </table>
+    </div>
+</html>

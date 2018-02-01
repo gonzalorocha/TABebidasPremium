@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/FrontEnd'));
 app.set('view engine', 'ejs');
 
 app.use('/api', api);
-app.use('*', index);
+app.use('/', index);
 
 app.listen(app.get('port'), function() {
   db.connect();

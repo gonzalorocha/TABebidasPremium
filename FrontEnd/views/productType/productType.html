@@ -1,0 +1,22 @@
+<html>
+    <div>
+        <h1>Listado de tipos de productos</h1>
+        <div>
+            Filtro:
+            <input type="text" placeholder="Buscar..." ng-model="vm.search">
+        </div>
+        <table>
+            <thead>
+                <th>Tipo</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in pt.product_types | filter:vm.search">
+                    <td>{{p.description}}</td>
+                </tr>
+            </tbody>          
+        </table>
+        <br>
+        <input type="text" placeholder="Nuevo tipo" ng-model="pt.newType.description">
+        <button ng-click="pt.agregar()">Agregar</button>
+    </div>
+</html>

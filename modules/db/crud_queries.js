@@ -1,5 +1,5 @@
 module.exports.product = {
-    get: 'SELECT * FROM product p INNER JOIN product_type pt on p.product_type_id=pt.id WHERE p.active=0 and pt.active=0',
+    get: 'SELECT p.*, pt.description as product_type FROM product p INNER JOIN product_type pt on p.product_type_id=pt.id WHERE p.active=0 and pt.active=0',
     getByID: 'SELECT * FROM product p INNER JOIN product_type pt on p.product_type_id=pt.id WHERE p.id=?',
     post: 'INSERT INTO product SET ?',
     put: 'UPDATE product SET ? WHERE ?',
