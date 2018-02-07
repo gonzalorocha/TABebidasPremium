@@ -19,4 +19,13 @@ function productTypeService($http){
             console.log(err)
         })
     };
+
+    this.deleteProductType = function(id){
+        $http.delete('/api/product_type',id).then(function(res){
+            console.log('Producto tipo eliminado');
+        }).catch(function(err){
+            console.log(err);
+        })
+
+    }
 };

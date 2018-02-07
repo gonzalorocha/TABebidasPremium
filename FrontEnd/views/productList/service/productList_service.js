@@ -11,4 +11,5 @@ function productListService($http){
             console.log(err);
         })
     }
+
 };
