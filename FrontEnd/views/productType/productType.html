@@ -8,10 +8,14 @@
         <table>
             <thead>
                 <th>Tipo</th>
+                <th>ID</th>
+                <th></th>
             </thead>
             <tbody>
                 <tr ng-repeat="p in pt.product_types | filter:vm.search">
                     <td>{{p.description}}</td>
+                    <td>{{p.id}}</td>
+                    <td><button ng-click="pt.eliminar(p.id)">Eliminar</button></td>
                 </tr>
             </tbody>          
         </table>

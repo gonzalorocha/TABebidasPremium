@@ -21,3 +21,4 @@ router.get('/product/:id',product.getByID);
 router.get('/product_type', product_type.get);
 router.get('/product_type/:id', product_type.getByID);
 router.post('/product_type', product_type.post);
+router.delete('/product_type/:id', product_type.delete);
